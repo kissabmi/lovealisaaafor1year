@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title >Best year of my life <3 </title>
+    <title>Best year of my life <3 </title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -22,24 +22,29 @@
             background-color: #ff99ccb2;
             padding: 15px 0;
             text-align: center;
+            overflow: auto; /* Добавлено для прокрутки, если элементы не помещаются на экране */
         }
         nav a {
             color: #333;
             text-decoration: none;
             padding: 10px 20px;
+            display: inline-block; /* Добавлено для правильного отображения ссылок в строку */
         }
         nav a:hover {
             background-color: #ff66b3e1;
             color: #fff;
+        }
+        nav a:hover::after {
             content: '';
+            position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 1%; /* Регулируйте размеры круга */
-            height: 1%; /* Регулируйте размеры круга */
-            border: 3px solid pink; /* Цвет и ширина границы */
-            border-radius: 70%; /* Создает круглую форму */
-            z-index: -1; /* Помещает псевдоэлемент за текст */
+            width: 10px; /* Размеры стрелки */
+            height: 10px; /* Размеры стрелки */
+            border-top: 2px solid pink; /* Цвет и толщина стрелки */
+            border-right: 2px solid pink; /* Цвет и толщина стрелки */
+            transform: rotate(45deg); /* Поворот стрелки */
         }
         section {
             padding: 20px;
@@ -55,13 +60,18 @@
             font-size: larger;
         }
         img {
-            display: block; /* Устанавливаем изображение как блочный элемент */
-            max-width: 100%; /* Устанавливаем максимальную ширину изображения в размере родительского контейнера */
-            height: auto; /* Поддерживаем пропорции */
-            margin: 0 auto; /* Выравниваем изображение по центру */
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
             border-radius: 7%;
         }
-        
+
+        @media only screen and (max-device-width: 414px) and (max-device-height: 896px) {
+            nav a {
+                padding: 8px 16px; /* Уменьшение отступов */
+            }
+        }
     </style>
 </head>
 <body>
@@ -78,11 +88,11 @@
 </nav>
 
 <section>
-    <img src="testluti.jpg" style="width: 101%; height: 400px">
+    <img src="testluti.jpg" style="width: 100%; height: 290px">
 </section>
 
 <footer>
-    <p style = text-shadow: 2px 2px 4px rgb(0, 0, 0);>26.05.2024 - forever...</p>
+    <p style="text-shadow: 2px 2px 4px rgb(0, 0, 0);">26.05.2024 - forever...</p>
 </footer>
 
 </body>
