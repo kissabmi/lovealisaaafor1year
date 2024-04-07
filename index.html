@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best year of my life <3 </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+            text-shadow: 2px 2px 4px pink;
+        }
+        header {
+            background-color: #ffcccc;
+            padding: 11px;
+            text-align: center;
+        }
+        nav {
+            background-color: #ff99ccb2;
+            padding: 16px 0;
+            text-align: center;
+            overflow: auto; /* Добавлено для прокрутки, если элементы не помещаются на экране */
+            background: linear-gradient(45deg, #d193adaf, #ff5090af);
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 13px;
+            display: inline-block; /* Добавлено для правильного отображения ссылок в строку */
+        }
+        nav a:hover {
+            background-color: #ff3de57a;
+            color: #fff;
+            transition: transform 0.3s ease-in-out;
+            animation: bounce 0.5s infinite alternate;   
+        }
+        @keyframes bounce {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
+        }
+        nav a:hover::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px; /* Размеры стрелки */
+            height: 10px; /* Размеры стрелки */
+            border-top: 2px solid pink; /* Цвет и толщина стрелки */
+            border-right: 2px solid pink; /* Цвет и толщина стрелки */
+            transform: rotate(45deg); /* Поворот стрелки */
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #ffcccc;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: larger;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 7%;
+        }
+
+        @media only screen and (max-device-width: 414px) and (max-device-height: 896px) {
+            nav a {
+                padding: 8px 16px; /* Уменьшение отступов */
+            }
+        }
+        footer p {
+            animation: blink 3s ease-in-out infinite;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.1; }
+            100% { opacity: 1; }
+        }
+        @keyframes rainbow {
+        0% { color: red; }
+        10% { color: orange; }
+         20% { color: yellow; }
+        30% { color: green; }
+        40% { color: blue; }
+        50% { color: indigo; }
+        60% { color: violet; }
+        70% { color: red; }
+        80% { color: orange; }
+        90% { color: yellow; }
+        100% { color: green; }
+        }
+        .rainbow-text {
+        animation: rainbow 10s infinite;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 class="rainbow-text">❤Год отношений❤ </h1>
+</header>
+
+<nav>
+    <a href="Q1.html">26 мая - 26 августа</a>
+    <a href="Q2.html">26 августа - 26 ноября</a>
+    <a href="Q3.html">26 ноября - 26 февраля</a>
+    <a href="Q4.html">26 февраля - 26 мая ;)</a>
+</nav>
+
+<section>
+    <img src="indexfoto)).jpg" style="width: 100%; height: 315px">
+</section>
+
+<footer>
+    <p style="text-shadow: 2px 2px 4px rgb(0, 0, 0);">⚜26.05.2024 - forever...⚜</p>
+    <a href="love.html"; style = font-size:11px;>｡･ﾟﾟ･хихихих･ﾟﾟ･｡</a>
+</footer>
+
+</body>
+</html>
