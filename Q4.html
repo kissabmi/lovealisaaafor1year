@@ -12,7 +12,7 @@
             padding: 0;
         }
         header {
-            padding: 8px;
+            padding: 7.3px;
             text-align: center;
             position: fixed;
             width: 100%;
@@ -62,7 +62,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0);
             opacity: 0;
             transition: opacity 0.3s ease;
             cursor: pointer;
@@ -332,18 +332,18 @@
 </div>
 
 <footer>
-    <div id="changingText">Алиса самая лучшая!</div>
+    <div id="changingText" style="font-size: 23px;font-family: cursive;color: rgba(255, 0, 0, 0.589);text-decoration-style: dashed;text-decoration-color: #ff94ed;text-decoration-line: overline;text-decoration-thickness: 3px;text-align: center;">Лиса любимая моя</div>
 
     <script>
         const textElement = document.getElementById('changingText');
         const texts = [
-            "Алиса самая лучшая!",
-            "Алиса самая красивая!",
-            "Алиса самая хорошая! ;)",
+            "Алисочка самая лучшая!",
+            "Алисик самая красивая!",
+            "Алисонька самая хорошая! ;)",
             "Алиса самая добрая!",
-            "Алиска топ",
+            "Алискис топ",
             "Алиска моя киска",
-            "Алисик 100/10",
+            "Алиса киса 100/10",
             "Aliska - best!!11"
         ];
         let currentIndex = 0;
@@ -356,7 +356,7 @@
         // Устанавливаем анимацию изменения текста
         textElement.style.animationName = 'changeTextAnimation';
 
-        // Запускаем изменение текста каждую секунду
+        // Запускаем изменение текста каждую секунду(2)
         setInterval(changeText, 1000);
     </script>
 </footer>

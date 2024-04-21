@@ -14,26 +14,34 @@
             text-shadow: 2px 2px 4px pink;
         }
         header {
-            background-color: #ffcccc;
+            background-color: #ff5090af;
             padding: 11px;
             text-align: center;
+            border-color: #ffffffa6;
+            border-width: 5px;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+            border-style: outset;
         }
         nav {
-            background-color: #ff99ccb2;
+            background-color: #ff99cc8c;
             padding: 16px 0;
             text-align: center;
             overflow: auto; /* Добавлено для прокрутки, если элементы не помещаются на экране */
-            background: linear-gradient(45deg, #d193adaf, #ff5090af);
+            background: linear-gradient(0deg, #d193adaf, #ff5090af);
+            border-bottom-left-radius: 17%;
+            border-bottom-right-radius: 17%;
         }
         nav a {
             color: #333;
             text-decoration: none;
-            padding: 10px 13px;
+            padding: 8px 7px;
             display: inline-block; /* Добавлено для правильного отображения ссылок в строку */
         }
         nav a:hover {
             background-color: #ff3de57a;
             color: #fff;
+            border-radius: 15px;
             transition: transform 0.3s ease-in-out;
             animation: bounce 0.5s infinite alternate;   
         }
@@ -62,20 +70,25 @@
             text-align: center;
         }
         footer {
-            background-color: #ffcccc;
+            background-color: #ffcccc70;
             padding: 10px 0;
             text-align: center;
             position: fixed;
             bottom: 0;
             width: 100%;
             font-size: larger;
+            border-top-left-radius: 1cm;
+            border-top-right-radius: 1cm;
         }
         img {
             display: block;
             max-width: 100%;
             height: auto;
-            margin: 0 auto;
+            margin-left: -7px;
             border-radius: 7%;
+            border-color: #ffcccce7;
+            border-width: 10px;
+            border-style: outset;
         }
 
         @media only screen and (max-device-width: 414px) and (max-device-height: 896px) {
@@ -117,6 +130,8 @@
 </header>
 
 <nav>
+    <a href="bfyear.html">до годика!</a>
+    <a href="vidosiki.html">видосики от мя для тя и наоборот!!</a>
     <a href="Q1.html">26 мая - 26 августа</a>
     <a href="Q2.html">26 августа - 26 ноября</a>
     <a href="Q3.html">26 ноября - 26 февраля</a>

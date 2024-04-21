@@ -3,64 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Changing Text Animation</title>
+    <title>До отношений❤</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
+            background: linear-gradient(90deg, #ffccccb4, #f08fb4a6, #f08fb4a6, #ffccccc5);
+            background-size: 400% 400%;
+            animation: gradientAnimation 5s ease infinite;
+            color: #333; /* Черный или темно-серый цвет текста */
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.5s ease; /* Плавный переход для фона */
         }
-
-        #changingText {
-            font-size: 36px;
-            animation-duration: 1s;
-            animation-timing-function: ease-in-out;
-            animation-iteration-count: infinite;
+        header, footer {
+            background-color: rgba(255, 204, 204, 0.8); /* Полупрозрачный светло-розовый фон для верхней и нижней частей */
+            padding: 20px;
+            text-align: center;
+            transition: background-color 0.5s ease; /* Плавный переход для фона */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для header и footer */
         }
-
-        @keyframes changeTextAnimation {
-            0%, 25%, 75%, 100% {
-                opacity: 0;
+        footer {
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Тень для footer (добавляет "поднятость" от фона) */
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        video {
+            width: 80%;
+            max-width: 800px;
+            display: block;
+            margin: 0 auto 20px; /* Центрируем видео и добавляем небольшое расстояние снизу */
+            border-radius: 10px; /* Скругляем углы видео */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для видео */
+        }
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Расстояние между фотографиями */
+        }
+        .photo {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px; /* Скругляем углы фотографий */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для фотографий */
+            transition: transform 0.3s ease; /* Плавный переход для фотографий */
+        }
+        .photo:hover {
+            transform: scale(1.1); /* Увеличиваем размер фотографии при наведении */
+        }
+        /* Стили для блока ссылки */
+        .home-link {
+            display: inline-block;
+            padding: 10px 20px;
+            
+            background-color: #ffcccc;
+            border-radius: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333; /* Цвет текста ссылки */
+            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        }
+        .home-link:hover {
+            transform: scale(1.1); /* Увеличиваем размер при наведении */
+            background-color: #ff8aaf; /* Изменяем цвет фона при наведении */
+            color: white; /* Изменяем цвет текста при наведении */
+        }
+        /* Дополнительные стили для мобильных устройств */
+        @media only screen and (max-width: 600px) {
+            /* Добавляем мобильные стили здесь */
+            body {
+                font-size: 16px; /* Уменьшаем размер текста для мобильных устройств */
             }
-            30%, 70% {
-                opacity: 1;
+            header, footer {
+                padding: 10px; /* Уменьшаем отступы верхней и нижней частей для мобильных устройств */
+            }
+        }
+        /* Анимация для фонового градиента */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        /* Анимация для текста */
+        @keyframes textAnimation {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        /* Анимация для текста */
+        @keyframes textAnimation2 {
+            0% {
+                color: #e91659;
+            }
+            25% {
+                color: #e91659cb;
+            }
+            50% {
+                color: #e916597c;
+            }
+            75% {
+                color: #e91659cb;
+            }
+            100% {
+                color: #e91659;
             }
         }
     </style>
 </head>
 <body>
-    <div id="changingText">Алиса самая лучшая!</div>
 
-    <script>
-        const textElement = document.getElementById('changingText');
-        const texts = [
-            "Алиса самая лучшая!",
-            "Алиса самая красивая!",
-            "Алиса самая хорошая! ;)",
-            "Алиса самая добрая!",
-            "Алиска топ",
-            "Алиска моя киска",
-            "Алисик 100/10",
-            "Aliska - best!!11"
-        ];
-        let currentIndex = 0;
+<header>
+    <h1 style="animation: textAnimation2 5s infinite;">Тут мы еще лп(˶ᵔ ᵕ ᵔ˶)</h1>
+    <nav>
+        <div class="home-link">ツHomeツ</div> <!-- Блок ссылки на главную страницу -->
+    </nav>
+</header>
 
-        function changeText() {
-            textElement.textContent = texts[currentIndex];
-            currentIndex = (currentIndex + 1) % texts.length;
+<main>
+    <h2 style="animation: textAnimation 1s ease infinite;">Мы котикиฅ^•ﻌ•^ฅ</h2>
+    <video controls>
+        <source src="zxctest.MP4" type="video/mp4">
+        
+    </video>
+
+    <h2 style="animation: textAnimation 1s ease infinite;">₍ ^. .^₎котики!!₍ ^. .^₎ пон</h2>
+    <div class="photo-gallery">
+        <img class="photo" src="indexfoto)).jpg" alt="Фото 1">
+        <img class="photo" src="path/to/your/photo2.jpg" alt="Фото 2">
+        <img class="photo" src="indexfoto)).jpg" alt="Фото 1">
+        <img class="photo" src="indexfoto)).jpg" alt="Фото 1">
+        <img class="photo" src="indexfoto)).jpg" alt="Фото 1">
+        <img class="photo" src="indexfoto)).jpg" alt="Фото 1">
+        <img class="photo" src="indexfoto)).jpg" alt="Фото 1">
+        <img class="photo" src="indexfoto)).jpg" alt="Фото 1">
+        <img class="photo" src="indexfoto)).jpg" alt="Фото 1">
+        <img class="photo" src="indexfoto)).jpg" alt="Фото 1">
+        <img class="photo" src="indexfoto)).jpg" alt="Фото 1">
+        <img class="photo" src="indexfoto)).jpg" alt="Фото 1">
+       
+        <!-- Добавьте другие фотографии по аналогии -->
+    </div>
+
+    
+</main>
+
+<footer>
+    <p style="color: white;text-decoration: underline; text-decoration-line: underline; text-decoration-color: rgb(238, 122, 184); text-decoration-style: wavy; text-align-last: center; text-transform: capitalize; font-style: italic; font-size: larger;">Made with love</p>
+</footer>
+
+<script>
+    // JavaScript для управления цветами фона при изменении размера окна
+    window.addEventListener('resize', function() {
+        const body = document.body;
+        const header = document.querySelector('header');
+        const footer = document.querySelector('footer');
+            body.style.backgroundColor = 'linear-gradient(45deg, #f1afc4, #f090af, #f57ba1, #f8508559)'; // Анимированный фон для компьютеров
+            header.style.backgroundColor = 'rgba(255, 204, 204, 0.8)'; // Полупрозрачный светло-розовый фон для компьютеров
+            footer.style.backgroundColor = 'rgba(255, 204, 204, 0.8)'; // Полупрозрачный светло-розовый фон для компьютеров
         }
+    });
 
-        // Устанавливаем анимацию изменения текста
-        textElement.style.animationName = 'changeTextAnimation';
+    // JavaScript для Parallax эффекта
+    window.addEventListener('scroll', function() {
+        const parallaxElements = document.querySelectorAll('.parallax');
+        parallaxElements.forEach(element => {
+            let speed = element.getAttribute('data-speed');
+            element.style.transform = `translateY(-${window.scrollY * speed}px)`;
+        });
+    });
 
-        // Запускаем изменение текста каждую секунду
-        setInterval(changeText, 1000);
-    </script>
+</script>
+
 </body>
 </html>
