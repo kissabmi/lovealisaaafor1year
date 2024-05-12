@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𓆩♡𓆪We𓆩♡𓆪</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            padding: 7.3px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            background: linear-gradient(180deg, #fd3a95e8, #eb91b2);
+            z-index: 1000;
+            top: 0;
+            transition: top 0.3s; /* Добавляем плавный переход для анимации появления/скрытия */
+        }
+        h1 {
+            margin-left: -40px;
+            margin-top: -7px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 100px auto 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+        .album {
+            margin-bottom: 40px;
+        }
+        .album h2 {
+            color: #333;
+        }
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .photo {
+            width: 60%;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+        .photo img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+        .photo::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+        }
+        .photo:hover::after {
+            opacity: 1;
+        }
+        .photo:hover .view-more {
+            display: block;
+        }
+        .view-more {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .videos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .video {
+            width: 45%;
+            margin-bottom: 20px;
+        }
+        .video iframe {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0px;
+            padding: 20px;
+            left: 0;
+            z-index: 1000;
+            background: linear-gradient(180deg, #ffeff600, #eb83a9);
+        }
+        footer p {
+            
+        }
+        nav {
+            background: linear-gradient(360deg, #ffffff00, #ff6fa491);
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 88px;
+            z-index: 1000;
+            transition: top 0.3s; /* Добавляем плавный переход для анимации появления/скрытия */
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            color: #fff;
+            background-color: #ff66b3e1;
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+
+        /* Применяем анимацию для скрытия header и nav при прокрутке вниз */
+        body.scrolling-down header,
+        body.scrolling-down nav {
+            top: -100px; /* Сдвигаем за пределы видимой области */
+        }
+        @keyframes rainbow {
+        0% { color: #ff66cc; }
+        10% { color: #ff77a9; }
+        20% { color: #ff8899; }
+        30% { color: #ff99cc; }
+        40% { color: #ffbbcc; }
+        50% { color: #ffccdd; }
+        60% { color: #ffddcc; }
+        70% { color: #ffeedd; }
+        80% { color: #ff99cc; }
+        90% { color: #ff77a9; }
+        100% { color: #ff66cc; }
+        }
+        .rainbow-text {
+        animation: rainbow 7s infinite;
+        }
+        @keyframes rainbowy {
+        0% { color: red; }
+        10% { color: orange; }
+         20% { color: yellow; }
+        30% { color: green; }
+        40% { color: blue; }
+        50% { color: indigo; }
+        60% { color: violet; }
+        70% { color: red; }
+        80% { color: orange; }
+        90% { color: yellow; }
+        100% { color: green; }
+        }
+        .rainbow-texty {
+        animation: rainbowy 7s infinite;
+        }
+        #changingText {
+            font-size: 31px;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            margin-top: 0px;
+            text-decoration: underline;
+            font-style: italic;
+            color: rgba(238, 36, 53, 0.699);
+        }
+
+        @keyframes changeTextAnimation {
+            0%, 25%, 75%, 100% {
+                opacity: 0;
+            }
+            30%, 70% {
+                opacity: 1;
+            }
+        }
+        h3 {
+        font-style: italic; /* Курсивный текст */
+        font-size: medium; /* Средний размер шрифта */
+        text-shadow: 2px 2px 0px rgba(128, 111, 204, 0.492); /* Тень текста */
+        color: #ff6087; /* Цвет текста */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1 class="rainbow-texty"style = "font-size:39px;font-family: 'Pacifico', cursive;">∞ ͟͟͞͞➳❥Year♥∞</h1>
+</header>
+
+<nav>
+    <a href="Q1.html">Q1</a>
+    <a href="Q2.html">Q2</a>
+    <a href="Q3.html">Q3</a>
+    <a href="index.html">Home</a>
+</nav>
+
+<div class="container">
+    <div class="album">
+        <h2 class="rainbow-text">Фоточки лучшей пары в мире<3</h2>
+        <div class="photos">
+            <div class="photo">
+                <img src="photo1.jpg" alt="Photo 1">
+            </div>
+            <div class="photo">
+                <img src="photo2.jpg" alt="Photo 2">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+        </div>
+    </div>
+
+    <div class="album">
+        <h2 class="rainbow-text">Видосики лучшей пары в мире<3</h2>
+        <div class="videos">
+            <div class="video">
+                <video width="185" height="240" controls>
+                    <source src="zxctest.MP4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video">
+                <video width="185" height="240" controls>
+                    <source src="zxctest.MP4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video">
+                <video width="185" height="240" controls>
+                    <source src="zxczxczxc.MOV" type="video/mp4">
+                </video>
+            </div>
+            <div class="video">
+                <video width="185" height="240" controls>
+                    <source src="zxctest.MP4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video">
+                <video width="185" height="240" controls>
+                    <source src="zxctest.MP4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video">
+                <video width="185" height="240" controls>
+                    <source src="zxctest.MP4" type="video/mp4">
+                </video>
+            </div>
+            <p class ='rainbow-texty'style = "font-size:19px;font-family: 'Pacifico', cursive;" >Алисик я тебя безумно сильно люблю (;</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div id="changingText" style="font-size: 23px;font-family: cursive;color: rgba(255, 0, 0, 0.589);text-decoration-style: dashed;text-decoration-color: #ff94ed;text-decoration-line: overline;text-decoration-thickness: 3px;text-align: center;">Лиса любимая моя</div>
+
+    <script>
+        const textElement = document.getElementById('changingText');
+        const texts = [
+            "Алисочка самая лучшая!",
+            "Алисик самая красивая!",
+            "Алисонька самая хорошая! ;)",
+            "Алиса самая добрая!",
+            "Алискис топ",
+            "Алиска моя киска",
+            "Алиса киса 100/10",
+            "Aliska - best!!11"
+        ];
+        let currentIndex = 0;
+
+        function changeText() {
+            textElement.textContent = texts[currentIndex];
+            currentIndex = (currentIndex + 1) % texts.length;
+        }
+
+        // Устанавливаем анимацию изменения текста
+        textElement.style.animationName = 'changeTextAnimation';
+
+        // Запускаем изменение текста каждую секунду(2)
+        setInterval(changeText, 1000);
+    </script>
+</footer>
+
+<script>
+    var lastScrollTop = 0;
+    window.addEventListener("scroll", function() {
+        var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        if (currentScroll > lastScrollTop) {
+            // Скролл вниз
+            document.body.classList.add("scrolling-down");
+        } else {
+            // Скролл вверх
+            document.body.classList.remove("scrolling-down");
+        }
+        lastScrollTop = currentScroll;
+    });
+</script>
+</body>
+</html>
