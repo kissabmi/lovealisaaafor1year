@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𓆩♡𓆪We𓆩♡𓆪</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            padding: 15.3px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            background: linear-gradient(180deg, #fd3a95e8, #eb91b2);
+            z-index: 1000;
+            top: 0;
+            transition: top 0.3s; /* Добавляем плавный переход для анимации появления/скрытия */
+        }
+        h1 {
+            margin-left: -40px;
+            margin-top: -7px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 100px auto 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+        .album {
+            margin-bottom: 40px;
+        }
+        .album h2 {
+            color: #333;
+        }
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .photo {
+            width: 60%;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+        .photo img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+        .photo::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+        }
+        .photo:hover::after {
+            opacity: 1;
+        }
+        .photo:hover .view-more {
+            display: block;
+        }
+        .view-more {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .videos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .video {
+            width: 45%;
+            margin-bottom: 20px;
+        }
+        .video iframe {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            z-index: 1000;
+            background: linear-gradient(180deg, #ffeff600, #eb83a9);
+        }
+        footer p {
+            animation: moveFooter 2s linear infinite alternate;
+        }
+        @keyframes moveFooter {
+            0% {
+                transform: translateY(15px);
+            }
+            100% {
+                transform: translateY(-15px);
+            }
+        }
+        nav {
+            background: linear-gradient(360deg, #ffffff00, #ff6fa491);
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 88px;
+            z-index: 1000;
+            transition: top 0.3s; /* Добавляем плавный переход для анимации появления/скрытия */
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            color: #fff;
+            background-color: #ff66b3e1;
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+
+        /* Применяем анимацию для скрытия header и nav при прокрутке вниз */
+        body.scrolling-down header,
+        body.scrolling-down nav {
+            top: -100px; /* Сдвигаем за пределы видимой области */
+        }
+        @keyframes rainbow {
+        0% { color: #ff66cc; }
+        10% { color: #ff77a9; }
+        20% { color: #ff8899; }
+        30% { color: #ff99cc; }
+        40% { color: #ffbbcc; }
+        50% { color: #ffccdd; }
+        60% { color: #ffddcc; }
+        70% { color: #ffeedd; }
+        80% { color: #ff99cc; }
+        90% { color: #ff77a9; }
+        100% { color: #ff66cc; }
+        }
+        .rainbow-text {
+        animation: rainbow 10s infinite;
+        }
+        h3 {
+        font-style: italic; /* Курсивный текст */
+        font-size: medium; /* Средний размер шрифта */
+        text-shadow: 2px 2px 0px rgba(128, 111, 204, 0.492); /* Тень текста */
+        color: #6cd2ec; /* Цвет текста */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>ੈ♡˳6 monthੈ♡˳</h1>
+</header>
+
+<nav>
+    <a href="Q1.html">Q1</a>
+    <a href="index.html">Home</a>
+    <a href="Q3.html">Q3</a>
+    <a href="Q4.html">Q4</a>
+</nav>
+
+<div class="container">
+    <div class="album">
+        <h2 class="rainbow-text">dada mi</h2>
+        <div class="photos">
+            <h3>Погналии малыеееее</h3>
+            <div class="photo">
+                <img src="q2_p1.jpg" alt="Photo 1">
+            </div>
+            
+            <div class="photo">
+                <img src="q2_p2.jpg" alt="Photo 2">
+            </div>
+            <div class="photo">
+                <img src="q2_p3.jpg" alt="Photo 3">
+            </div>
+            <h3>оп оп гуляемммм!!!</h3>
+            <div class="photo">
+                <img src="q2_p4.jpg" alt="Photo 3">
+            </div>
+            <h3>алиска когда свадьбаа</h3>
+            <div class="photo">
+                <img src="q2_p5.jpg" alt="Photo 3">
+            </div>
+            <h3>тут вообщ нереально имбово</h3>
+            <div class="photo">
+                <img src="q2_p6.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="q2_p7.jpg" alt="Photo 3">
+            </div>
+            <h3>приложухаихихиххихи</h3>
+            <div class="photo">
+                <img src="q2_p8.jpg" alt="Photo 1">
+            </div>
+            <h3>без трусов малой)(безштанов)</h3>
+            <div class="photo">
+                <img src="q2_p9.jpg" alt="Photo 2">
+            </div>/
+            <h3>тот самый тренд!!!!!</h3>
+            <div class="photo">
+                <img src="q2_p10.jpg" alt="Photo 3">
+            </div>
+            <h3> miloo ochen ochen```</h3>
+            <div class="photo">
+                <img src="q2_p11.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="q2_p12.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="q2_p13.jpg" alt="Photo 3">
+            </div>
+            <h3>УРАААААААААААААА 4 месяцаа</h3>
+            <div class="photo">
+                <img src="q2_p14.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="q2_p15.jpg" alt="Photo 1">
+            </div>
+            <h3>было бы славно, но нет((</h3>
+            <div class="photo">
+                <img src="q2_p16.jpg" alt="Photo 2">
+            </div>
+            <h3>ну пон ихихиххихихихи</h3>
+            <div class="photo">
+                <img src="q2_p17.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="q2_p18.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="q2_p19.jpg" alt="Photo 3">
+            </div>
+            <h3>5 месяцеввввввввв ураураруарурау топи топопопопоп люблю алиску футболочка вообеще 120391203912039102/10</h3>
+            <div class="photo">
+                <img src="5mes1.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="5mes2.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="q2_p20.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="q2_p21.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="q2_p22.jpg" alt="Photo 1">
+            </div>
+            <div class="photo">
+                <img src="q2_p23.jpg" alt="Photo 2">
+            </div>
+            <div class="photo">
+                <img src="q2_p24.jpg" alt="Photo 3">
+            </div>
+            <h3>ТАКАЯ ЛАПКАА СПЯЩАЯЯЯ 1 раз тя сфотал когда спишьь</h3>
+            <div class="photo">
+                <img src="q2_p25.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="q2_p26.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="q2_p27.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="q2_p28.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="q2_p29.jpg" alt="Photo 1">
+            </div>
+            <div class="photo">
+                <img src="q2_p30.jpg" alt="Photo 2">
+            </div>
+            <div class="photo">
+                <img src="q2_p31.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="q2_p32.jpg" alt="Photo 3">
+            </div>
+            <h3>ураа 6 месяцев:):);););) твои подарки самые лучшие и тортик тоже топ!!!!</h3>
+            <div class="photo">
+                <img src="q2_p33.jpg" alt="Photo 3">
+            </div>
+        </div>
+    </div>
+
+    <div class="album">
+        <h2 class="rainbow-text">Наши видеос!понн</h2>
+        <div class="videos">
+            <div class="video">
+                <video width="185" height="240" controls>
+                    <source src="q2_v1.MP4" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v2.MP4" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v3.MP4" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v4.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v5.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v6.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v7.MP4" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v8.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v9.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v10.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v11.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v12.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v13.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v14.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v15.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v16.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v17.MP4" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v18.MP4" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v19.MP4" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v20.MP4" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v21.MP4" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v22.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v23.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v24.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v25.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v26.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v27.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v28.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v29.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v30.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v31.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v32.MP4" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v33.MP4" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v34.MP4" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v35.MP4" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v36.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v37.MP4" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v38.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v39.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v40.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v41.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v42.MP4" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v43.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v44.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v45.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v46.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v47.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v48.MOV" type="video/mp4">
+                </video>
+                <video width="185" height="240" controls>
+                    <source src="q2_v49.MP4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p style="font-size:27px;">♡𓆩♡𓆪✧❁❁✧✿✿✧❁❁✧𓆩♡𓆪♡</p>
+</footer>
+
+<script>
+    var lastScrollTop = 0;
+    window.addEventListener("scroll", function() {
+        var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        if (currentScroll > lastScrollTop) {
+            // Скролл вниз
+            document.body.classList.add("scrolling-down");
+        } else {
+            // Скролл вверх
+            document.body.classList.remove("scrolling-down");
+        }
+        lastScrollTop = currentScroll;
+    });
+</script>
+</body>
+</html>
