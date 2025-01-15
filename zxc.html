@@ -64,12 +64,32 @@
         }
 
         .heart {
-            position: absolute;
+            position: relative;
             width: 150px;
             height: 150px;
             background-color: #ff3385;
             transform: rotate(45deg);
             animation: pulse 2s infinite;
+        }
+
+        .heart-link {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-decoration: none;
+            font-size: 0.5em;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 5px 10px;
+            border-radius: 10px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .heart-link:hover {
+            transform: translate(-50%, -50%) scale(1.2);
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
         .heart::before,
@@ -148,7 +168,6 @@
             font-size: 1.2em;
         }
 
-        /* Стили для боковых ссылок */
         .side-links {
             position: fixed;
             top: 50%;
@@ -158,6 +177,13 @@
             z-index: 10;
             display: flex;
             flex-direction: column;
+        }
+        h2 {
+            font-size: 0.1em;
+            left: 200px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         .side-links a {
@@ -205,29 +231,30 @@
 <body>
 
 <header>
-    <h1>❤ Любимой Алисочке ❤</h1>
+    <h1>❤ Любимой Алисочке ❤
+    </h1>
 </header>
 
 <nav>
     <a href="index.html">На главную</a>
 </nav>
-
+<h2>сердечко 0/10? тогда нажми↓↓↓</h2>
 <section>
+    
     <div class="animation-container">
-        <div class="heart"></div>
+        <div class="heart">
+            <a href="imbalove.html" class="heart-link">......тык</a>
+        </div>
+        
         <div class="particles" id="particles0"></div>
-        <!-- Частицы для первого контейнера -->
         <div class="particles" id="particles1"></div>
-        <!-- Частицы для второго контейнера -->
         <div class="particles" id="particles2"></div>
-        <!-- Частицы для третьего контейнера -->
         <div class="particles" id="particles3"></div>
-        <!-- Частицы для четвертого контейнера -->
         <div class="particles" id="particles4"></div>
+    
     </div>
 </section>
 
-<!-- Боковые ссылки -->
 <div class="side-links">
     <a href="page1.html">Нажми киска моя</a>
     <a href="page2.html">Клик кисонька моя</a>
@@ -239,30 +266,25 @@
 </footer>
 
 <script>
-    // Функция для генерации случайных частиц по контуру сердца с параметрами масштабирования
     function generateParticles(containerId, scaleX, scaleY) {
         const particlesContainer = document.querySelector(`#${containerId}`);
-        const numberOfParticles = 150; // Количество частиц
+        const numberOfParticles = 150;
         const heartWidth = 150;
         const heartHeight = 150;
 
-        // Очищаем контейнер перед добавлением новых частиц
         particlesContainer.innerHTML = '';
 
         for (let i = 0; i < numberOfParticles; i++) {
             const particle = document.createElement('div');
             particle.classList.add('particle');
 
-            // Параметрическое уравнение для сердца
-            const t = (i / numberOfParticles) * 2 * Math.PI; // t от 0 до 2pi
+            const t = (i / numberOfParticles) * 2 * Math.PI;
             const x = 16 * Math.pow(Math.sin(t), 3);
             const y = 13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t);
 
-            // Применяем координаты частиц с заданными значениями scaleX и scaleY
             const posX = x * scaleX + heartWidth / 2;
             const posY = -y * scaleY + heartHeight / 2;
 
-            // Устанавливаем позиции частиц
             particle.style.top = `${posY}px`;
             particle.style.left = `${posX}px`;
 
@@ -270,13 +292,12 @@
         }
     }
 
-    // Запускаем функцию генерации частиц с различными параметрами масштабирования для нескольких контейнеров
     generateParticles('particles0', 13, 13);
-    generateParticles('particles1', 16, 16);  // первая группа частиц
-    generateParticles('particles2', 20, 20);  // вторая группа частиц с другими масштабами
-    generateParticles('particles3', 23, 23);  // третья группа частиц
-    generateParticles('particles4', 26, 26);  // четвертая группа частиц
+    generateParticles('particles1', 16, 16);
+    generateParticles('particles2', 20, 20);
+    generateParticles('particles3', 23, 23);
+    generateParticles('particles4', 26, 26);
 </script>
-
+    
 </body>
 </html>
