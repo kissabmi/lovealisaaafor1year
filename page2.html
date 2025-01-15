@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мини-игра с сердечками</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffe6f2;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .game-container {
+            position: relative;
+            width: 80%;
+            height: 80%;
+            border: 2px solid #ff3385;
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* Стили для сердечек */
+        .heart {
+            position: absolute;
+            font-size: 30px;
+            color: red;
+            cursor: pointer;
+            animation: moveHeart 2s infinite ease-in-out;
+        }
+
+        @keyframes moveHeart {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.3);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .score {
+            font-size: 2em;
+            color: #ff3385;
+            margin-top: 20px;
+        }
+
+        .cat {
+            width: 100px;
+            height: 100px;
+            background: url('https://cdn.pixabay.com/photo/2018/02/24/20/55/cat-3172760_960_720.png') no-repeat center center;
+            background-size: cover;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .button {
+            background-color: #ff3385;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 25px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #ff80b3;
+        }
+
+        .side-text {
+            position: absolute;
+            font-size: 1.5em;
+            color: #ff3385;
+            animation: moveText 3s infinite ease-in-out;
+        }
+
+        .left-text {
+            left: 10%;
+        }
+
+        .right-text {
+            right: 10%;
+        }
+
+        @keyframes moveText {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Стили для ссылки на zxc.html */
+        .top-link {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2em;
+            font-weight: bold;
+            color: #49303a;
+            text-decoration: none;
+            background: linear-gradient(45deg, #ff3385, #ff80b3);
+            padding: 10px 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: glow 1.5s infinite alternate;
+        }
+
+        .top-link:hover {
+            color: white;
+            background: linear-gradient(45deg, #ff80b3, #ff3385);
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px #ff3385, 0 0 10px #ff3385, 0 0 15px #ff3385;
+            }
+            100% {
+                text-shadow: 0 0 10px #ff3385, 0 0 20px #ff3385, 0 0 30px #ff3385;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<a href="zxc.html" class="top-link"><span>жмяк сюда -> прошлая стр</span></a>
+
+<div class="game-container" id="game-container">
+    <div class="cat" id="cat"></div>
+    <div class="score" id="score">Счёт: 0</div>
+    <button class="button" id="startButton">Начать игру</button>
+
+    <!-- Милые надписи по бокам -->
+    <div class="side-text left-text">Ты моя мяукалка</div>
+    <div class="side-text right-text">мяу пон!</div>
+</div>
+
+<script>
+    let score = 0;
+    let gameInterval;
+    let heartInterval;
+
+    // Функция для начала игры
+    document.getElementById("startButton").addEventListener("click", function() {
+        score = 0;
+        document.getElementById("score").innerText = "Счёт: " + score;
+        this.style.display = 'none'; // Прячем кнопку
+        startGame();
+    });
+
+    // Функция для создания сердечек
+    function createHeart() {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.innerHTML = '♥мяу♥'; // Сердечко
+
+        // Задаём случайные позиции для сердечек
+        heart.style.top = `${Math.random() * 70}%`;
+        heart.style.left = `${Math.random() * 80}%`;
+
+        document.getElementById('game-container').appendChild(heart);
+
+        heart.addEventListener('click', function() {
+            score++;
+            document.getElementById('score').innerText = "Счёт: " + score;
+            heart.remove(); // Удаляем сердечко при клике
+        });
+
+        // Удаляем сердечко через 3 секунды, если на него не кликнули
+        setTimeout(function() {
+            heart.remove();
+        }, 3000);
+    }
+
+    // Функция для старта игры
+    function startGame() {
+        gameInterval = setInterval(createHeart, 1000); // Сердечки появляются каждую секунду
+        setTimeout(function() {
+            clearInterval(gameInterval);
+            alert('Игра окончена! Ваш счёт: ' + score);
+            document.getElementById("startButton").style.display = 'block'; // Показываем кнопку снова
+        }, 30000); // Игра длится 30 секунд
+    }
+</script>
+
+</body>
+</html>
