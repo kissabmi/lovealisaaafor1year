@@ -27,7 +27,7 @@
             background-color: #ff99cc8c;
             padding: 16px 0;
             text-align: center;
-            overflow: auto; /* Добавлено для прокрутки, если элементы не помещаются на экране */
+            overflow: auto;
             background: linear-gradient(0deg, #d193adaf, #ff5090af);
             border-bottom-left-radius: 17%;
             border-bottom-right-radius: 17%;
@@ -36,7 +36,7 @@
             color: #333;
             text-decoration: none;
             padding: 8px 7px;
-            display: inline-block; /* Добавлено для правильного отображения ссылок в строку */
+            display: inline-block;
         }
         nav a:hover {
             background-color: #ff3de57a;
@@ -59,11 +59,11 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 10px; /* Размеры стрелки */
-            height: 10px; /* Размеры стрелки */
-            border-top: 2px solid pink; /* Цвет и толщина стрелки */
-            border-right: 2px solid pink; /* Цвет и толщина стрелки */
-            transform: rotate(45deg); /* Поворот стрелки */
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid pink;
+            border-right: 2px solid pink;
+            transform: rotate(45deg);
         }
         section {
             padding: 20px;
@@ -93,7 +93,7 @@
 
         @media only screen and (max-device-width: 414px) and (max-device-height: 896px) {
             nav a {
-                padding: 8px 16px; /* Уменьшение отступов */
+                padding: 8px 16px;
             }
         }
         footer p {
@@ -121,6 +121,34 @@
         animation: rainbow 10s infinite;
         }
 
+        .secret-link {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff66b2;
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .secret-link:hover {
+            color: #ff3de5;
+            transform: scale(1.2);
+        }
+
+        .secret-link::before {
+            content: '🔒';
+            position: absolute;
+            left: -25px;
+            top: 0;
+            font-size: 24px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .secret-link:hover::before {
+            opacity: 1;
+        }
+
     </style>
 </head>
 <body>
@@ -142,9 +170,14 @@
     <img src="indexfoto)).jpg" style="width: 100%; height: 315px">
 </section>
 
+<!-- Ссылка на "secret" с анимацией -->
+<div style="text-align: center; margin-top: 20px;">
+    <a href="zxc.html" class="secret-link">secret</a>
+</div>
+
 <footer>
     <p style="text-shadow: 2px 2px 4px rgb(0, 0, 0);">⚜26.05.2024 - forever...⚜</p>
-    <a href="love.html"; style = font-size:11px;>｡･ﾟﾟ･хихихих･ﾟﾟ･｡</a>
+    <a href="love.html" style="font-size:11px;">｡･ﾟﾟ･хихихих･ﾟﾟ･｡</a>
 </footer>
 
 </body>
